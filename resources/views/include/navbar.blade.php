@@ -1,28 +1,28 @@
-<header class="main">
-    <div class="container">
-        <a href="#" class="logo">Algebra CRM</a>
-        <button class="navbar-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggle-icon"></span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">Blogebra</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar navbar-collapse">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Edit</a>
+                        <a class="nav-link" href="#">My page</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Users</a>
                     </li>
                 @endauth
             </ul>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mb-2 mb-lg-0 pe-5">
                 @auth
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             {{ auth()->user()->first_name }}
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-list" href="{{ route('logout') }}">Logout</a></li>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ route('logout') }}">Logout</a></li>
                         </ul>
                     </li>
                 @else
@@ -36,4 +36,4 @@
             </ul>
         </div>
     </div>
-</header>
+</nav>

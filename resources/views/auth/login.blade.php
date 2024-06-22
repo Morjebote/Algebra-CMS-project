@@ -5,22 +5,22 @@
 @endsection
 
 @section('content')
-    <div class="auth-container">
-        <div class="row">
-            <div class="auth-content">
-                <h2>Login</h2>
+    <div class="container p-5 vh-100 d-flex align-items-center justify-content-center">
+        <div class="row p-5 justify-content-center w-100 bg-light rounded shadow">
+            <div class="col-md-6">
+                <h2 class="text-center mb-3">Login</h2>
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
-                    <div class="input-field">
-                        <label for="inputEmail1" class="form-label">Email address</label>
-                        <input type="email" name="email" class="form-input" id="inputEmail1">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
-                    <div class="input-field">
-                        <label for="inputPassword1" class="form-label">Password</label>
-                        <input type="password" name="password" class="form-input" id="inputPassword1">
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                  </form>
             </div>
         </div>
     </div>
