@@ -21,8 +21,6 @@ return new class extends Migration
             $table->unsignedBigInteger('edited_by');
             $table->foreign('edited_by')->references('id')->on('users');
 
-            $table->dateTime('creation_date', 0);
-            $table->dateTime('last_edit_date', 0);
             $table->text('text');
             $table->string('image');
 

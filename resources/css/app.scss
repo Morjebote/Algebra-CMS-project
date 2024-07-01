@@ -1,0 +1,20 @@
+:root {
+    --navbar-height: 50px;
+}
+
+body {
+    height: 100vh;
+
+    .navbar {
+        height: var(--navbar-height);
+        box-shadow: 0px -10px 20px 10px lightgrey;
+    }
+
+    .container {
+        height: calc(100% - var(--navbar-height));
+
+        .row {
+            transform: translateY(calc(var(--navbar-height) * -0.5));
+        }
+    }
+}
